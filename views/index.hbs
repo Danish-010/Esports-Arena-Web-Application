@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <title>For The Gamers</title>
+  {{!-- bootstrap css --}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  {{!-- fontawesome css --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {{!-- bootstrap javascript --}}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  {{>navbar data=details}}
+  {{>slider slides=slides}}
+
+  {{!-- banner 1 section --}}
+  <section class="banner1_section banner1background text-white py-5">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Grind Hard Make Your Dreams Come True</h1>
+          <p>
+            Esports is one of the highest paying careers out there but becoming an E-Athlete is not that easy but now
+            the worry is over this website will guide you through the process and help in establishing a career in
+            gaming.
+          </p>
+          <a href="https://www.intel.in/content/www/in/en/gaming/resources/want-pro-gamer.html">
+            <button class="btn btn-outline-primary">Begin your journey</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- game category section --}}
+  <section id="game" class="py-3 gamesection">
+    <div class="container">
+      <h1 class="text-center text-dark">Famous Esports Titles In India</h1>
+      <div class="row mt-5">
+        {{!-- first game column --}}
+        {{#each game}}
+        <div class="col-md-4 py-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="container text-center py-3">
+                <i class="{{this.icon}} game_icon"></i>
+              </div>
+              <h5 class="card-title">{{this.title}}</h5>
+              <p>{{this.description}}</p>
+              <a href="{{this.linktext}}">{{this.link}}</a>
+              <a href="{{this.teamlink}}" class="margin">Teams</a>
+
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+  {{!-- banner2 section --}}
+  <section class="banner2_section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center pt-5">
+          {{!-- leftside --}}
+          <h3>
+            Dont Compromise With Your Dreams...
+          </h3>
+          <p>
+            A lot of young aspirants just loose there hope to become a gamer because there is no family/financial
+            support. We can not blame the family too for it because gaming culture in India is still in its early
+            developing stage. so to solve this issue we will be providing you with all the necessary needs like
+            headphones smartphones gaming tower on rental basis at a low price so just go for it...
+          </p>
+          <a
+            href="https://readyesports.com/dear-mom-i-want-to-play-games-for-a-living/#:~:text=Or%20show%20them%20an%20example,will%20make%20you%20more%20successful."><button
+              class="btn btn-primary">Explore More!</button></a>
+        </div>
+        <div class="col-md-6 text-center py-2">
+          {{!-- rightside --}}
+          <img src="/static/images/banner2img1.jpg" class="img-fluid" style="max-height:350px;" />
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- banner 3section --}}
+  <section class="banner2_section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center py-2">
+          {{!-- leftside --}}
+          <img src="/static/images/banner2img2.jpg" class="img-fluid" style="max-height: 350px;" />
+        </div>
+        <div class="col-md-6 text-center pt-5">
+          {{!-- rightside --}}
+          <h3>
+            How To Earn Money From Gaming ?
+          </h3>
+          <p>
+            A gamer have multiple sources of income first is...<br>
+            1.Youtube Channel-once your youtube channel is up and running with a decent number of views you are good go
+            it is estimated that a gamer like scout earns approx 15-20lakhs a month only from youtube.<br>
+            2.Organisation-If you dont have a youtube channel but u are an E-athlete and playing from an org then org
+            pays a huge salleries to the players+ if a team wins a huge tournaments then they can keep that money as a
+            bonus but a tds of 30%is taken off.<br>
+            3.Brandeals-Brand pay huge amount of money to the influencer(famous youtubers) to promote there products.
+          </p>
+          <a
+            href="https://www.forbes.com/sites/forbeseq/2022/08/30/top-4-ways-to-earn-money-with-video-games/?sh=1f03b3e42ad4"><button
+              class="btn btn-primary">Explore More!</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- contact us section --}}
+  <section id="contact_us_section" class="py-5 background1">
+    <div class="container">
+      <h3 class="text-center text-light">For gaming PC builds queries and rental services contact us...</h3>
+      <div class="row">
+        <div class="col-md-12">
+          {{!-- form --}}
+          <form action="/process-contact-form" method="post">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label text-light">Enter your e-mail address</label>
+              <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label text-light">Enter your contact number</label>
+              <input name="phone" type="number" class="form-control text-light" id="exampleInputPassword1">
+            </div>
+            <div class="form-floating my-2">
+              <textarea name="query" style="height: 250px;" class="form-control" placeholder="Enter your Query here"
+                id="Queryfield"></textarea>
+              <label for="Queryfield">Your query</label>
+            </div>
+            <div class="container text-center">
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- about section --}}
+  <section class="about_section py-5" id="about_section">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>About this site</h3>
+          <p>
+            This website is intented to solve the problems of an aspiring Esports Athlete/Gaming content creator by
+            providing rental based services and guiding in becoming a successful gamer.
+          </p>
+          <button class="btn btn-success btn-lg">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer background1 text-center py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-white">
+          2023 copyright: <span>Gaming Era</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

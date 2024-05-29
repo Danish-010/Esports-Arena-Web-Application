@@ -1,0 +1,23 @@
+.slider-image{
+  height: 700px ;
+  object-fit: cover;
+}
+.game_icon{
+  font-size:90px;
+  color:black;
+}
+.background1{
+background-image: url("intel.jpg");
+background-size: auto;
+}
+.banner1background{
+  background-image:url("black.jpg");
+  background-size:cover;
+}
+.gamesection{
+  background-image:url("godofwar.jpg");
+  background-size:cover;
+}
+.margin{
+  margin-left:240px;
+}
