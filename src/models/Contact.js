@@ -1,7 +1,11 @@
-const mongoose=require('mongoose')
-const Contact=mongoose.Schema({
-    email:String,
-    phone:String,
-    query:String
-})
-module.exports=mongoose.model("queries",Contact)
+import mongoose from 'mongoose';
+
+const { Schema, model } = mongoose;
+
+const contactSchema = new Schema({
+    email: String,
+    phone: String,
+    query: String,
+});
+
+export default model('Query', contactSchema);

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "my project",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/app.js -e js,hbs"
@@ -11,11 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "hbs": "^4.2.0",
-    "mongoose": "^6.12.6"
+    "mongoose": "^6.13.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.1.4"
   }
 }

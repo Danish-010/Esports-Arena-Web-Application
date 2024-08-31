@@ -1,12 +1,12 @@
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade">
   <div class="carousel-indicators">
-    {{#each slides}}
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{@index}}" class="active" aria-current="true" aria-label="Slide 1"></button>
+    {{#each sli}}
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{@index}}" class="{{#if @first}}active{{/if}}" aria-current="true" aria-label="Slide {{@index}}"></button>
     {{/each}}
   </div>
   <div class="carousel-inner">
-     {{#each slides}}
-    <div class="carousel-item {{this.class}}">
+    {{#each sli}}
+    <div class="carousel-item {{#if @first}}active{{/if}}">
       <img src="{{this.imageurl}}" class="d-block w-100 slider-image" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h1>{{this.title}}</h1>
